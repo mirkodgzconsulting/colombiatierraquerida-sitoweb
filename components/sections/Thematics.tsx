@@ -41,7 +41,7 @@ const THEMATICS = [
 
 export default function Thematics() {
     return (
-        <section id="tematica" className="w-full bg-[#fcfcff] py-20 px-4 md:px-8 lg:px-16 font-sans">
+        <section id="tematica" className="w-full bg-[#fcfcff] py-12 md:py-20 px-4 md:px-8 lg:px-16 font-sans">
             <div className="w-full max-w-6xl mx-auto flex flex-col gap-12">
 
                 {/* Header */}

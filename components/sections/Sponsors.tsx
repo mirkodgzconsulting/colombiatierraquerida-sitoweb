@@ -29,11 +29,11 @@ export default function Sponsors() {
                     Sponsors Oficiales 2025
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 w-full">
                     {OFFICIAL_SPONSORS.map((src, index) => {
                         // Logo 2 (index 1) needs ULTRA maximum size -> p-0 + scale-[1.8]
                         // Logo 7 (index 6) needs large size -> p-4
-                        let paddingClass = 'p-10';
+                        let paddingClass = 'p-6 md:p-10';
                         let imgTransform = '';
 
                         if (index === 1) {
@@ -46,7 +46,7 @@ export default function Sponsors() {
                         return (
                             <div
                                 key={`official-${index}`}
-                                className={`relative h-[180px] w-full bg-[#f7f7f7] rounded-lg flex items-center justify-center overflow-hidden ${paddingClass} ${index === 6 ? 'md:col-start-2' : ''}`}
+                                className={`relative h-[180px] w-full bg-[#f7f7f7] rounded-lg flex items-center justify-center overflow-hidden ${paddingClass} ${index === 6 ? 'col-span-2 md:col-span-1 md:col-start-2' : ''}`}
                             >
                                 <div className="relative h-full w-full">
                                     <Image
@@ -69,9 +69,9 @@ export default function Sponsors() {
                     Con il patrocinio di
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 w-full">
                     {PATRONAGE_SPONSORS.map((src, index) => (
-                        <div key={`patronage-${index}`} className="relative h-[180px] bg-[#f7f7f7] rounded-lg flex items-center justify-center p-10">
+                        <div key={`patronage-${index}`} className="relative h-[180px] bg-[#f7f7f7] rounded-lg flex items-center justify-center p-6 md:p-10">
                             <div className="relative h-full w-full">
                                 <Image
                                     src={src}

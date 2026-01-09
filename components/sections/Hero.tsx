@@ -10,7 +10,7 @@ export default function Hero() {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
-        <section id="hero" className="relative w-full min-h-screen flex flex-col items-center justify-start pt-24 pb-40 bg-[#193DB8] overflow-hidden">
+        <section id="hero" className="relative w-full min-h-screen flex flex-col items-center justify-start pt-24 pb-20 md:pb-40 bg-[#193DB8] overflow-hidden">
             {/* Background Video */}
             <video
                 className="absolute inset-0 w-full h-full object-cover opacity-80"
@@ -94,9 +94,9 @@ export default function Hero() {
                     </div>
 
                     {/* Play Button Overlay - Centered Absolute */}
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center justify-center pointer-events-none">
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col items-center justify-center pointer-events-none">
                         <div
-                            className="relative w-24 h-24 bg-[#DB1533]/90 backdrop-blur-[4px] rounded-full flex items-center justify-center shadow-2xl animate-slow-spin-hover cursor-pointer pointer-events-auto hover:scale-110 transition-transform ring-4 ring-white/20"
+                            className="relative w-16 h-16 md:w-24 md:h-24 bg-[#DB1533]/90 backdrop-blur-[4px] rounded-full flex items-center justify-center shadow-2xl animate-slow-spin-hover cursor-pointer pointer-events-auto hover:scale-110 transition-transform ring-4 ring-white/20"
                             onClick={() => setShowVideo(true)}
                         >
                             {/* Rotating Text */}

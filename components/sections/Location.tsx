@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function Location() {
     return (
-        <section id="lugar" className="w-full bg-white py-16 flex flex-col gap-16 items-center">
+        <section id="lugar" className="w-full bg-white py-12 md:py-16 flex flex-col gap-16 items-center">
             {/* Map Section */}
             <div className="w-full max-w-7xl px-4">
-                <div className="relative w-full aspect-[21/9] rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 bg-[#f8f5e6]">
+                <div className="relative w-full aspect-video md:aspect-[21/9] rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 bg-[#f8f5e6]">
                     <Image src="/mapa.avif" alt="Mapa del evento Idroscalo" fill className="object-cover object-center" sizes="(max-width: 1280px) 100vw, 1280px" />
 
                     {/* Map Overlay Buttons (Bottom Center) */}

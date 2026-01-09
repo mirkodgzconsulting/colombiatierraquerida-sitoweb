@@ -46,23 +46,23 @@ export default function Commemoration() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 
                     {/* Card 1 */}
-                    <div className="bg-[#EFEEFF] border-2 border-[#2E1065] rounded-xl p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#2E1065] min-h-[220px]">
-                        <span className="text-5xl font-bold text-[#2E1065] font-sans">25</span>
+                    <div className="bg-[#EFEEFF] border-2 border-[#2E1065] rounded-xl p-6 md:p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#2E1065] min-h-[160px] md:min-h-[220px]">
+                        <span className="text-4xl md:text-5xl font-bold text-[#2E1065] font-sans">25</span>
                         <p className="text-[#1e3a8a] font-bold text-lg leading-tight">
                             Expositores gastronomicos y comerciales
                         </p>
                     </div>
 
                     {/* Card 2 */}
-                    <div className="bg-[#EFEEFF] border-2 border-[#2E1065] rounded-xl p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#2E1065] min-h-[220px] md:-mt-8">
-                        <span className="text-5xl font-bold text-[#2E1065] font-sans">+5000</span>
+                    <div className="bg-[#EFEEFF] border-2 border-[#2E1065] rounded-xl p-6 md:p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#2E1065] min-h-[160px] md:min-h-[220px] md:-mt-8">
+                        <span className="text-4xl md:text-5xl font-bold text-[#2E1065] font-sans">+5000</span>
                         <p className="text-[#1e3a8a] font-bold text-lg leading-tight">
                             colombianos, latinos e italianos
                         </p>
                     </div>
 
                     {/* Card 3 */}
-                    <div className="bg-[#EFEEFF] border-2 border-[#2E1065] rounded-xl p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#2E1065] min-h-[220px]">
+                    <div className="bg-[#EFEEFF] border-2 border-[#2E1065] rounded-xl p-6 md:p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#2E1065] min-h-[160px] md:min-h-[220px]">
                         <Heart className="w-16 h-16 text-[#2E1065] stroke-[2.5]" />
                         <p className="text-[#1e3a8a] font-bold text-lg leading-tight mt-2">
                             Más de 15 Asociaciones e Instituciones
@@ -70,7 +70,7 @@ export default function Commemoration() {
                     </div>
 
                     {/* Card 4 (Yellow) */}
-                    <div className="bg-[#ffd738] border-2 border-[#0F172A] rounded-xl p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#0F172A] min-h-[220px]">
+                    <div className="bg-[#ffd738] border-2 border-[#0F172A] rounded-xl p-6 md:p-8 flex flex-col items-center justify-center text-center gap-2 shadow-[6px_6px_0px_0px_#0F172A] min-h-[160px] md:min-h-[220px]">
                         <Handshake className="w-16 h-16 text-[#0F172A] stroke-[2.5]" />
                         <p className="text-[#0F172A] font-bold text-lg leading-tight mt-2">
                             Más de 15 empresas presentes

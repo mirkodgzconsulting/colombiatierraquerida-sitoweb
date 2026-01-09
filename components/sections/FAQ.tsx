@@ -77,7 +77,7 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faq" className="w-full bg-[#193DBB] py-20 px-4 md:px-8 lg:px-16 font-sans">
+        <section id="faq" className="w-full bg-[#193DBB] py-12 md:py-20 px-4 md:px-8 lg:px-16 font-sans">
             <div className="w-full max-w-5xl mx-auto flex flex-col gap-10">
 
                 {/* Header */}

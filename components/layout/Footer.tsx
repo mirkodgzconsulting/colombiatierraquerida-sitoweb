@@ -29,7 +29,7 @@ const CONTACTS = [
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-[#ffd738] pt-16 pb-8 px-4 md:px-8 lg:px-16 text-[#1e293b] font-sans">
+        <footer className="w-full bg-[#ffd738] pt-12 md:pt-16 pb-8 px-4 md:px-8 lg:px-16 text-[#1e293b] font-sans">
             <div className="w-full max-w-7xl mx-auto flex flex-col gap-16">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
