@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "Festival Colombiano Milán"
   ],
   authors: [{ name: "Colombia Tierra Querida" }],
+  icons: {
+    icon: "/logo-colombia-tierra-querida.avif",
+  },
   openGraph: {
     title: "Colombia Tierra Querida - 20 Julio 2026",
     description: "La celebración oficial de la Independencia de Colombia en el Idroscalo de Milán. Un evento cívico-cultural imperdible.",
