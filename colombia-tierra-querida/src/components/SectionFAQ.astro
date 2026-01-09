@@ -1,0 +1,54 @@
+---
+const faqs = [
+  {
+    question: "¿Dónde compro las entradas?",
+    answer: "Puedes adquirir tus entradas directamente en nuestro sitio web o en la taquilla el día del evento."
+  },
+  {
+    question: "¿Puedo llevar comida?",
+    answer: "No, el evento contará con una amplia zona gastronómica con opciones para todos los gustos."
+  },
+  {
+    question: "¿Es apto para niños?",
+    answer: "¡Sí! Colombia Tierra Querida es un evento familiar. Los niños menores de 12 años entran gratis."
+  },
+  {
+    question: "¿Hay parqueadero?",
+    answer: "Sí, el Idroscalo cuenta con amplias zonas de parqueo vigilado."
+  }
+];
+---
+
+<section id="faq" class="py-20 bg-primary text-white">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <div class="text-center mb-16">
+      <h2 class="font-anton text-5xl text-white mb-4 uppercase">Preguntas Frecuentes</h2>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <details class="group bg-white/10 rounded-xl overflow-hidden border border-white/10 open:bg-white/20 transition-all duration-300">
+          <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+            <h3 class="font-anton text-xl tracking-wide">{faq.question}</h3>
+            <span class="transform group-open:rotate-180 transition-transform duration-300 text-secondary text-2xl">
+              ▼
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-2 font-inter text-gray-200 leading-relaxed border-t border-white/10">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Remove default triangle in some browsers */
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

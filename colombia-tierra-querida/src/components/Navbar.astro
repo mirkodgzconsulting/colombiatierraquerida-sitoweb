@@ -1,0 +1,101 @@
+---
+const links = [
+  { text: "Nosotros", href: "#about" },
+  { text: "Programa", href: "#agenda" },
+  { text: "Temáticas", href: "#tematicas" },
+  { text: "Lugar", href: "#venue" },
+  { text: "FAQ", href: "#faq" },
+];
+---
+
+<nav class="fixed top-0 left-0 w-full bg-[#193DB8]/95 backdrop-blur-sm z-50 h-[81px] flex items-center border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-4 w-full h-full flex justify-between items-center relative">
+    <!-- Logo (Left) -->
+    <a href="#" class="flex flex-col items-center leading-none group shrink-0">
+        <img 
+            src="/logo-colombia-tierra-querida.avif" 
+            alt="Colombia Tierra Querida" 
+            class="h-16 w-auto object-contain"
+        />
+    </a>
+
+    <!-- Desktop Menu (Centered) -->
+    <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <ul class="flex gap-8 items-center">
+        {links.map((link) => (
+            <li>
+            <a 
+                href={link.href} 
+                class="font-inter font-medium text-[15px] text-white hover:text-[#FFD738] transition-colors"
+                class:list={[{ "font-bold text-white": link.text === "Participa" }]}
+            >
+                {link.text}
+            </a>
+            </li>
+        ))}
+        <li>
+             <a 
+                href="https://participa.colombiatierraquerida.it" 
+                class="font-inter font-medium text-[15px] text-white hover:text-[#FFD738] transition-colors"
+            >
+                Participa
+            </a>
+        </li>
+        </ul>
+    </div>
+
+    <!-- Contact Button (Right) -->
+    <div class="hidden md:block shrink-0">
+        <a 
+          href="#contact" 
+          class="border border-white hover:bg-white hover:text-primary bg-transparent text-white font-inter font-medium text-[14px] px-6 py-2 rounded-full transition-all"
+        >
+          Contactar
+        </a>
+    </div>
+
+    <!-- Mobile Menu Toggle (Visible on mobile) -->
+    <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none">
+       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+       </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-primary/95 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 ease-in-out md:hidden top-0 left-0 h-screen w-screen z-40">
+      {links.map((link) => (
+        <a 
+          href={link.href} 
+          class="font-anton text-4xl text-white hover:text-secondary uppercase tracking-wider mobile-link"
+        >
+          {link.text}
+        </a>
+      ))}
+      <a 
+          href="https://tickets.colombiatierraquerida.it" 
+          target="_blank"
+          class="bg-accent text-white font-anton uppercase text-xl px-8 py-3 rounded-full mt-4"
+        >
+          Participa
+      </a>
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  menuToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('translate-x-full');
+    // Simple icon toggle/animation could be added here
+  });
+
+  // Close menu when clicking a link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('translate-x-full');
+    });
+  });
+</script>

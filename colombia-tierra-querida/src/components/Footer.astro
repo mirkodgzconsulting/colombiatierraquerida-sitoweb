@@ -1,0 +1,59 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-primary text-white pt-20 pb-10 border-t border-white/10">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <!-- Brand -->
+      <div class="col-span-1 lg:col-span-2">
+        <h2 class="font-anton text-4xl mb-6">COLOMBIA TIERRA QUERIDA</h2>
+        <p class="font-inter text-white/80 max-w-sm mb-8">
+            El evento que une a nuestra comunidad en el corazón de Europa. Música, sabor y tradición.
+        </p>
+        <div class="flex gap-4">
+            <!-- Social Icons (Placeholders) -->
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">IG</a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">FB</a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">YT</a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="font-anton text-xl mb-6 text-secondary">Enlaces</h3>
+        <ul class="space-y-4 font-inter text-white/80">
+          <li><a href="#about" class="hover:text-white transition-colors">Nosotros</a></li>
+          <li><a href="#agenda" class="hover:text-white transition-colors">Programa</a></li>
+          <li><a href="#venue" class="hover:text-white transition-colors">Cómo llegar</a></li>
+          <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="font-anton text-xl mb-6 text-secondary">Newsletter</h3>
+        <p class="font-inter text-sm text-white/60 mb-4">Entérate de las novedades y artistas confirmados.</p>
+        <form class="flex flex-col gap-3">
+            <input 
+                type="email" 
+                placeholder="Tu correo electrónico" 
+                class="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary transition-colors"
+                required
+            />
+            <button class="bg-secondary text-primary font-bold font-inter uppercase tracking-wide py-3 rounded-lg hover:bg-white transition-colors">
+                Suscribirse
+            </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/10 pt-10 text-center font-inter text-white/40 text-sm">
+      <p>&copy; {year} Colombia Tierra Querida. Todos los derechos reservados.</p>
+      <div class="mt-2 text-xs">
+          Diseñado con ❤️ por <span class="text-white">Antigravity</span>
+      </div>
+    </div>
+  </div>
+</footer>
