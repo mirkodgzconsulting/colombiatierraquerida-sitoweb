@@ -38,7 +38,7 @@ export default function Sponsors() {
 
                         if (index === 1) {
                             paddingClass = 'p-0';
-                            imgTransform = 'scale-[1.8]';
+                            imgTransform = 'scale-100 md:scale-[1.8]';
                         } else if (index === 6) {
                             paddingClass = 'p-4';
                         }

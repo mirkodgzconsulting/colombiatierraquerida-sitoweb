@@ -23,7 +23,7 @@ const THEMATICS = [
         title: "DESFILE FOLCLORICO",
         description: "Con la participación de los grupos de Danza",
         image: "/Tematica/features-04.avif",
-        radiusClass: "rounded-tr-[5rem] rounded-tl-2xl rounded-bl-2xl rounded-br-2xl"
+        radiusClass: "rounded-tr-[5rem] rounded-bl-[5rem] rounded-tl-2xl rounded-br-2xl"
     },
     {
         title: "MÚSICA",

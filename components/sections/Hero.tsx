@@ -10,7 +10,7 @@ export default function Hero() {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
-        <section id="hero" className="relative w-full min-h-screen flex flex-col items-center justify-start pt-24 pb-20 md:pb-40 bg-[#193DB8] overflow-hidden">
+        <section id="hero" className="relative w-full min-h-screen flex flex-col items-center justify-start pt-28 pb-20 md:pt-32 md:pb-40 bg-[#193DBB] overflow-hidden">
             {/* Background Video */}
             <video
                 className="absolute inset-0 w-full h-full object-cover opacity-80"
@@ -23,36 +23,36 @@ export default function Hero() {
                 <source src="/colombiavideo.mp4" type="video/mp4" />
             </video>
 
-            <div className="relative z-10 text-center px-4 w-full max-w-6xl mx-auto flex flex-col items-center pt-4">
-                {/* Text Content Wrapper - Expanded for Title, Narrow for Description */}
+            <div className="relative z-10 text-center px-4 w-full max-w-6xl mx-auto flex flex-col items-center">
+                {/* Text Content Wrapper */}
                 <div className="max-w-3xl w-full flex flex-col items-center">
                     {/* Subheading */}
-                    <p className="font-inter font-bold text-[14px] text-[#FFD738] mb-2 animate-slide-up">
+                    <p className="font-inter font-bold text-[13px] md:text-[14px] text-[#FFD738] mb-2 animate-slide-up uppercase tracking-wide">
                         Celebremos juntos el 20 de Julio en el corazón de Milán
                     </p>
 
-                    {/* Main Title - Single Line */}
-                    <h1 className="font-anton text-[36px] md:text-[48px] lg:text-[56px] text-white tracking-wide leading-tight mb-2 uppercase drop-shadow-sm animate-fade-in whitespace-nowrap">
+                    {/* Main Title */}
+                    <h1 className="font-anton text-[42px] sm:text-[56px] md:text-[72px] lg:text-[80px] text-white tracking-wide leading-[0.9] mb-4 uppercase drop-shadow-sm animate-fade-in whitespace-normal md:whitespace-nowrap">
                         COLOMBIA, TIERRA QUERIDA
                     </h1>
 
-                    {/* Event Details - Narrower */}
-                    <p className="font-inter font-medium text-white/90 text-[16px] mb-8 leading-relaxed animate-slide-up max-w-xl">
+                    {/* Event Details */}
+                    <p className="font-inter font-medium text-white/90 text-[15px] md:text-[18px] mb-8 leading-relaxed animate-slide-up max-w-xl px-2 md:px-0">
                         El domingo 20 de julio, celebremos con orgullo y patriotismo
-                        nuestra Fiesta Nacional en el Idroscalo de la Ciudad de Milán.<br />
+                        nuestra Fiesta Nacional en el Idroscalo de la Ciudad de Milán.<br className="hidden md:block" />
                         Entrada gratuita para todos. ¡No faltes!
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto items-center animate-slide-up mb-2 relative z-40">
+                    <div className="flex flex-row gap-4 md:gap-6 w-full justify-center items-center animate-slide-up mb-8 relative z-40">
                         <a
                             href="https://participa.colombiatierraquerida.it"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-8 py-3 bg-[#DB1533] text-white font-inter font-bold text-[15px] rounded-full hover:brightness-110 transition-all hover:scale-105 shadow-md flex items-center gap-2"
+                            className="px-6 py-2.5 md:px-8 md:py-3 bg-[#DB1533] text-white font-inter font-bold text-[15px] rounded-full hover:brightness-110 transition-all hover:scale-105 shadow-md flex items-center gap-2 group"
                         >
                             Sponsors
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                             </svg>
                         </a>
@@ -67,14 +67,14 @@ export default function Hero() {
 
                 {/* Overlapping Interactive Cards (x4) */}
                 <div
-                    className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full translate-y-4 relative z-30 px-4 lg:px-0"
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 w-full relative z-30 px-2 lg:px-0 mt-4 md:mt-8"
                     style={{ perspective: "1200px" }}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
 
-                    {/* Card 1: Default TL -> Hover BL */}
-                    <div className={`h-[250px] md:h-[400px] lg:h-[420px] rounded-tr-[4px] rounded-br-[4px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl ${isHovered ? 'rounded-tl-[4px] rounded-bl-[100px]' : 'rounded-tl-[100px] rounded-bl-[4px]'} hover:-translate-y-2`}>
+                    {/* Card 1: Mobile TL 80px | Desktop TL 100px -> BR 100px */}
+                    <div className={`h-[160px] md:h-[400px] lg:h-[420px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl hover:-translate-y-2 rounded-tr-[4px] rounded-bl-[4px] rounded-br-[4px] rounded-tl-[80px] ${isHovered ? 'md:rounded-tl-[4px] md:rounded-br-[100px]' : 'md:rounded-tl-[100px] md:rounded-br-[4px]'}`}>
                         <Image
                             src="/img-hero1.avif"
                             alt="Musica"
@@ -83,8 +83,8 @@ export default function Hero() {
                         />
                     </div>
 
-                    {/* Card 2: Default TR -> Hover BR */}
-                    <div className={`h-[250px] md:h-[400px] lg:h-[420px] rounded-tl-[4px] rounded-bl-[4px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl ${isHovered ? 'rounded-tr-[4px] rounded-br-[100px]' : 'rounded-tr-[100px] rounded-br-[4px]'} hover:-translate-y-2`}>
+                    {/* Card 2: Mobile BL 80px | Desktop BL 100px -> TR 100px */}
+                    <div className={`h-[160px] md:h-[400px] lg:h-[420px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl hover:-translate-y-2 rounded-tl-[4px] rounded-tr-[4px] rounded-br-[4px] rounded-bl-[80px] ${isHovered ? 'md:rounded-bl-[4px] md:rounded-tr-[100px]' : 'md:rounded-bl-[100px] md:rounded-tr-[4px]'}`}>
                         <Image
                             src="/img-hero2.avif"
                             alt="Gente"
@@ -96,7 +96,7 @@ export default function Hero() {
                     {/* Play Button Overlay - Centered Absolute */}
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col items-center justify-center pointer-events-none">
                         <div
-                            className="relative w-16 h-16 md:w-24 md:h-24 bg-[#DB1533]/90 backdrop-blur-[4px] rounded-full flex items-center justify-center shadow-2xl animate-slow-spin-hover cursor-pointer pointer-events-auto hover:scale-110 transition-transform ring-4 ring-white/20"
+                            className="relative w-24 h-24 md:w-24 md:h-24 bg-[#DB1533]/90 backdrop-blur-[4px] rounded-full flex items-center justify-center shadow-2xl animate-slow-spin-hover cursor-pointer pointer-events-auto hover:scale-110 transition-transform ring-4 ring-white/20"
                             onClick={() => setShowVideo(true)}
                         >
                             {/* Rotating Text */}
@@ -115,8 +115,8 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    {/* Card 3: Default TL -> Hover BL */}
-                    <div className={`h-[250px] md:h-[400px] lg:h-[420px] rounded-tr-[4px] rounded-br-[4px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl ${isHovered ? 'rounded-tl-[4px] rounded-bl-[100px]' : 'rounded-tl-[100px] rounded-bl-[4px]'} hover:-translate-y-2`}>
+                    {/* Card 3: Mobile TR 80px | Desktop TR 100px -> BL 100px */}
+                    <div className={`h-[160px] md:h-[400px] lg:h-[420px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl hover:-translate-y-2 rounded-tl-[4px] rounded-bl-[4px] rounded-br-[4px] rounded-tr-[80px] ${isHovered ? 'md:rounded-tr-[4px] md:rounded-bl-[100px]' : 'md:rounded-tr-[100px] md:rounded-bl-[4px]'}`}>
                         <Image
                             src="/img-hero3.avif"
                             alt="Video"
@@ -125,8 +125,8 @@ export default function Hero() {
                         />
                     </div>
 
-                    {/* Card 4: Default TR -> Hover BR */}
-                    <div className={`h-[250px] md:h-[400px] lg:h-[420px] rounded-tl-[4px] rounded-bl-[4px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl ${isHovered ? 'rounded-tr-[4px] rounded-br-[100px]' : 'rounded-tr-[100px] rounded-br-[4px]'} hover:-translate-y-2`}>
+                    {/* Card 4: Mobile BR 80px | Desktop BR 100px -> TL 100px */}
+                    <div className={`h-[160px] md:h-[400px] lg:h-[420px] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-hidden relative shadow-2xl hover:-translate-y-2 rounded-tr-[4px] rounded-tl-[4px] rounded-bl-[4px] rounded-br-[80px] ${isHovered ? 'md:rounded-br-[4px] md:rounded-tl-[100px]' : 'md:rounded-br-[100px] md:rounded-tl-[4px]'}`}>
                         <Image
                             src="/img-hero4.avif"
                             alt="Danza"
